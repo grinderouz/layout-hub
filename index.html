@@ -111,22 +111,18 @@
 
     <div id="navbar-container"></div>
 
-    <!-- Hero Section -->
     <section class="pt-32 pb-10 px-6 max-w-6xl mx-auto text-center">
         <h1 class="text-4xl md:text-6xl font-black text-white mb-6 uppercase tracking-tight">Base Layouts</h1>
         <p class="text-slate-300 max-w-2xl mx-auto font-medium">Select your Town Hall level to find the best curated bases. Copy them directly to your game.</p>
     </section>
 
-    <!-- Town Hall Selector -->
-    <section class="py-6 border-y border-slate-800 bg-[#111111]/90 backdrop-blur-md sticky top-[72px] z-40">
+    <section class="py-6 border-y border-yellow-800 bg-[black]/90 backdrop-blur-md sticky top-[60px] z-40 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4">
             <div id="th-selector" class="flex overflow-x-auto hide-scroll gap-3 pb-2 snap-x">
-                <!-- Injected by JS -->
             </div>
         </div>
     </section>
 
-    <!-- Layouts Grid -->
     <section class="py-12 px-6 min-h-[60vh]">
         <div class="max-w-7xl mx-auto">
             <div class="flex items-center justify-between mb-10">
@@ -139,18 +135,17 @@
             </div>
 
             <div id="layouts-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                <!-- Layout cards injected by JS -->
             </div>
         </div>
     </section>
 
     <footer class="py-8 text-center text-slate-500 text-xs border-t border-slate-800 bg-[#111111]/90 mt-auto">
     <div class="max-w-4xl mx-auto px-6">
+        <p>For uploading your own bases Join our Clan Discord Server! <a href="https://discord.gg/jEN9NNdA4v" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-400 hover:underline transition-colors">Join Server Now</a>.</p>
         <p>This material is unofficial and is not endorsed by Supercell. For more information see <a href="https://supercell.com/en/fan-content-policy/" target="_blank" rel="noopener noreferrer" class="text-yellow-500 hover:text-yellow-400 hover:underline transition-colors">Supercell's Fan Content Policy</a>.</p>
     </div>
 </footer>
 
-    <!-- Scripts -->
     <script src="layoutnav.js"></script>
     <script src="layoutdb.js"></script>
 
@@ -177,7 +172,6 @@
         function selectTH(th) {
             currentTH = th;
             
-            // UI Toggle
             document.querySelectorAll('.th-btn').forEach(btn => btn.classList.remove('active', 'text-white'));
             const activeBtn = document.getElementById(`btn-th-${th}`);
             if (activeBtn) {
@@ -191,8 +185,7 @@
 
         function renderLayouts(th) {
             const grid = document.getElementById('layouts-grid');
-            // Access database from window object
-            const layouts = window.layoutDatabase[th] || [];
+            const layouts = window.layoutDatabase ? window.layoutDatabase[th] || [] : [];
             
             document.getElementById('layout-count').innerText = `${layouts.length} Bases`;
             

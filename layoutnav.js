@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 opacity: 0.7;
             }
 
-            /* The "Supercell ID" style button */
             .sc-id-btn {
                 background-color: var(--sc-white);
                 color: var(--sc-black);
@@ -54,14 +53,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 transform: scale(1.05);
             }
 
-            /* Mobile Menu Overlay */
             .sc-mobile-overlay {
                 background-color: var(--sc-black);
                 z-index: 100;
                 transition: transform 0.4s cubic-bezier(0.77,0.2,0.05,1.0);
             }
 
-            /* Animated Hamburger */
             .sc-hamburger {
                 width: 24px;
                 height: 18px;
@@ -94,7 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
         <nav id="main-nav" class="sc-nav fixed top-0 left-0 w-full z-[100] flex items-center px-6 md:px-12">
             <div class="max-w-7xl w-full mx-auto flex justify-between items-center">
                 
-                <!-- Logo Section -->
                 <div class="flex items-center gap-8">
                     <a href="index.html" class="flex items-center gap-2">
                         <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center overflow-hidden">
@@ -103,7 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         <span class="text-white font-black text-xl tracking-tighter uppercase hidden sm:block">GRINDEROUZ-DB</span>
                     </a>
 
-                    <!-- Desktop Nav Links -->
                     <div class="hidden lg:flex items-center gap-8 ml-4">
                         <a href="https://grinderouz.github.io/clan/index.html" class="sc-link">Home</a>
                         <a href="index.html" class="sc-link">Base Layouts</a>
@@ -111,13 +106,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 </div>
 
-                <!-- Right Side Actions -->
                 <div class="flex items-center gap-6">
                     <a href="https://grinderouz.github.io/clan/index.html#join" class="sc-id-btn hidden sm:block">
                         Join Clan
                     </a>
                     
-                    <!-- Mobile Hamburger -->
                     <button id="sc-menu-btn" class="lg:hidden p-2 focus:outline-none">
                         <div id="sc-hamburger" class="sc-hamburger">
                             <span></span>
@@ -129,7 +122,6 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         </nav>
 
-        <!-- Mobile Menu Overlay -->
         <div id="sc-overlay" class="sc-mobile-overlay fixed inset-0 translate-x-full lg:hidden flex flex-col pt-24 px-10">
             <div class="flex flex-col gap-8">
                 <a href="https://grinderouz.github.io/clan/index.html" class="text-white text-3xl font-black uppercase tracking-widest">Home</a>
@@ -145,20 +137,17 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
     `;
 
-    // Inject the navbar
     const container = document.getElementById('navbar-container');
     if (container) {
         container.innerHTML = navbarHTML;
     }
 
-    // Logic
     const menuBtn = document.getElementById('sc-menu-btn');
     const overlay = document.getElementById('sc-overlay');
     const hamburger = document.getElementById('sc-hamburger');
     const nav = document.getElementById('main-nav');
     let isMenuOpen = false;
 
-    // Scroll Effect
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             nav.classList.add('scrolled');
@@ -184,7 +173,6 @@ document.addEventListener('DOMContentLoaded', () => {
         menuBtn.addEventListener('click', toggleMenu);
     }
 
-    // Close menu on link click
     overlay.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             if (isMenuOpen) toggleMenu();
