@@ -14,7 +14,7 @@ const layoutsData = {
             id: 0701,
             title: "Farming Base TH7 with Link, Anti 3 Stars, Hybrid - plan / layout / design",
             type: baseTypes.HYBRID,
-            image: "https://clashofclans-layouts.com/pics/th7_plans/farm/thumb/th7_farm_278.jpg?u=1766850129",
+            image: "https://clashofclans-layouts.com/pics/th7_plans/farm/thumb/th7_farm_278.jpg",
             link: "https://link.clashofclans.com/en?action=OpenLayout&id=TH7%3AHV%3AAAAAAQAAAAMILEE1Sh2WeOXuonFAtZ58",
             date: "Unknown"
         },
@@ -22,8 +22,26 @@ const layoutsData = {
             id: 0702,
             title: "Top War Base TH7 with Link, Anti Everything, Hybrid - CWL Defence Plan",
             type: baseTypes.HYBRID,
-            image: "https://clashofclans-layouts.com/pics/th7_plans/war/thumb/th7_war_148.jpg?u=1734640505",
+            image: "https://clashofclans-layouts.com/pics/th7_plans/war/thumb/th7_war_148.jpg",
             link: "https://link.clashofclans.com/en?action=OpenLayout&id=TH7%3AWB%3AAAAAAQAAAALZG0xZJHDZQP7zpKL_XIAI",
+            date: "Unknown"
+        },
+    ],
+    8: [
+        {
+            id: 0801,
+            title: "Top War Base TH8 with Link, Anti Everything - Anti 2 Stars CWL Plan 2026",
+            type: baseTypes.WAR,
+            image: "https://clashofclans-layouts.com/pics/th8_plans/war/thumb/th8_war_143.jpg",
+            link: "https://link.clashofclans.com/en?action=OpenLayout&id=TH8%3AWB%3AAAAACAAAAALdvtC5M7zuTQ3itUC9tPmA",
+            date: "Unknown"
+        },
+        {
+            id: 0802,
+            title: "Farming Base TH8 with Link - plan / layout / design",
+            type: baseTypes.FARM,
+            image: "https://clashofclans-layouts.com/pics/th8_plans/farm/thumb/th8_farm_311.jpg",
+            link: "https://link.clashofclans.com/en?action=OpenLayout&id=TH8%3AHV%3AAAAACAAAAALdv0zzGBYBMlmsiwiBqH8i",
             date: "Unknown"
         },
     ],
@@ -59,6 +77,84 @@ const layoutsData = {
             image: "assets/previews/th9-rj.png",
             link: "https://link.clashofclans.com/en?action=OpenLayout&id=TH9%3AHV%3AAAAAQQAAAAJLXt_sx7d-uAPzq9m_Gb9k",
             date: "3/31/2026"
+        },
+        {
+            id: 0905,
+            title: "Anti 3 Stars Base TH9 with Link - best plan / layout / design",
+            type: baseTypes.TROPHY,
+            image: "https://clashofclans-layouts.com/pics/th9_plans/defence/thumb/th9_defence_259.jpg",
+            link: "https://link.clashofclans.com/en?action=OpenLayout&id=TH9%3AHV%3AAAAAKwAAAAKPW0weLSa4Es9gxkloKYkV",
+            date: "Unknown"
+        },
+        {
+            id: 0906,
+            title: "Anti 2 Stars Base TH9 with Link - best plan / layout / design",
+            type: baseTypes.TROPHY,
+            image: "https://clashofclans-layouts.com/pics/th9_plans/defence/thumb/th9_defence_257.jpg",
+            link: "https://link.clashofclans.com/en?action=OpenLayout&id=TH9%3AHV%3AAAAAKwAAAAKNVsQrrC6-g5vc-UTpvyPr",
+            date: "Unknown"
+        },
+        {
+            id: 0907,
+            title: "Anti 2 Stars Base TH9 with Link - best plan / layout / design",
+            type: baseTypes.WAR,
+            image: "https://clashofclans-layouts.com/pics/th9_plans/war/thumb/th9_war_129.jpg",
+            link: "https://link.clashofclans.com/en?action=OpenLayout&id=TH9%3AWB%3AAAAAKwAAAAKNVmHcHTUbLvrMUolwr6lo",
+            date: "Unknown"
+        },
+    ],
+    10: [
+        {
+            id: 1001,
+            title: "Top War Base TH10 with Link - CWL Defence Plan 2026",
+            type: baseTypes.WAR,
+            image: "https://clashofclans-layouts.com/pics/th10_plans/war/thumb/th10_war_198.jpg",
+            link: "https://link.clashofclans.com/en?action=OpenLayout&id=TH10%3AWB%3AAAAASAAAAAIUWjPlh01ibVIgnOlRSaGq",
+            date: "Unknown"
+        },
+        {
+            id: 1002,
+            title: "Farming Base TH10 with Link, Hybrid - plan / layout / design",
+            type: baseTypes.FARM,
+            image: "https://clashofclans-layouts.com/pics/th10_plans/farm/thumb/th10_farm_228.jpg",
+            link: "https://link.clashofclans.com/en?action=OpenLayout&id=TH10%3AHV%3AAAAASAAAAAIVzp2ZN_diaGAQNQD9lDSi",
+            date: "Unknown"
+        },
+    ],
+    11: [
+        {
+            id: 1101,
+            title: "Top War Base TH11 with Link, Anti Air / Electro Dragon, Hybrid - CWL Defence Plan 2026",
+            type: baseTypes.WAR,
+            image: "https://clashofclans-layouts.com/pics/th11_plans/war/thumb/th11_war_200.jpg",
+            link: "https://link.clashofclans.com/en?action=OpenLayout&id=TH11%3AWB%3AAAAAFwAAAAKwuXhU1GXES3dWAoSWJ3QC",
+            date: "Unknown"
+        },
+        {
+            id: 1102,
+            title: "Unbeatable Base TH11 with Link, Hybrid - best plan / Anti Loot / design",
+            type: baseTypes.HYBRID,
+            image: "https://clashofclans-layouts.com/pics/th11_plans/defence/thumb/th11_defence_132.jpg",
+            link: "https://link.clashofclans.com/en?action=OpenLayout&id=TH11%3AHV%3AAAAAFwAAAAKxVvAsT9id6qwHoLMBk48j",
+            date: "Unknown"
+        },
+    ],
+    12: [
+        {
+            id: 1101,
+            title: "Defense (Trophy) Base TH12 with Link - plan / layout / design - Clash of Clans 2026",
+            type: baseTypes.TROPHY,
+            image: "https://clashofclans-layouts.com/pics/th12_plans/defence/thumb/th12_defence_147.jpg",
+            link: "https://link.clashofclans.com/en?action=OpenLayout&id=TH12%3AHV%3AAAAAMQAAAAJ1J7ehj-2iTH8zUNT97ifL",
+            date: "Unknown"
+        },
+        {
+            id: 1102,
+            title: "Coming Soon...",
+            type: baseTypes.SOON,
+            image: "#",
+            link: "#",
+            date: "Unknown"
         },
     ],
 };

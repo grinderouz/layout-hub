@@ -93,8 +93,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 <div class="flex items-center gap-8">
                     <a href="index.html" class="flex items-center gap-2">
-                        <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center overflow-hidden">
-                            <img src="assets/favicon.png" alt="Logo" class="w-8 h-8" onerror="this.src='https://supercell.com/images/23/supercell_logo.png'">
+                        <div class="w-10 h-10 rounded-lg flex items-center justify-center overflow-hidden">
+                            <img src="assets/navicon.png" alt="Logo" class="w-8 h-8" onerror="this.src='https://supercell.com/images/23/supercell_logo.png'">
                         </div>
                         <span class="text-white font-black text-xl tracking-tighter uppercase hidden sm:block">GRINDEROUZ-DB</span>
                     </a>
