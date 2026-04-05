@@ -5,7 +5,7 @@ const baseTypes = {
     CWL: { id: 'cwl', name: 'CWL', color: 'bg-blue-900/50 text-blue-400 border-blue-700/50' },
     HYBRID: { id: 'hybrid', name: 'Hybrid', color: 'bg-yellow-900/50 text-yellow-400 border-yellow-700/50' },
     CLANMADE: { id: 'clanlayout', name: 'Clan Made', color: 'bg-[gold] text-[black] border-[gold]' },
-    ART: { id: 'art', name: 'ART', color: 'bg-[pink] text-[white] border-[blue]' },
+    ART: { id: 'art', name: 'ART', color: 'bg-pink-900/50 text-pink-400 border-pink-700/50' },
     SOON: { id: 'soon', name: 'Coming Soon!', color: 'bg-[darkorange] text-white-400 border-[orange]' }
 };
 
