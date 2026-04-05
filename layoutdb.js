@@ -166,6 +166,14 @@ const layoutsData = {
             link: "https://link.clashofclans.com/en?action=OpenLayout&id=TH13%3AWB%3AAAAADgAAAALPSu_SPvErfN-Msd28w3Pq",
             date: "Unknown"
         },
+        {
+            id: 1302,
+            title: "Anti 3 Stars Base TH13 with Link, Hybrid - best plan / layout / design",
+            type: baseTypes.HYBRID,
+            image: "https://clashofclans-layouts.com/pics/th13_plans/defence/original/th13_defence_63.jpg?u=1681124767",
+            link: "https://link.clashofclans.com/en?action=OpenLayout&id=TH13%3AHV%3AAAAADgAAAAJL3hEtYLXb8xM4jDCIMjI6",
+            date: "Unknown"
+        },
     ],
 };
 
