@@ -25,223 +25,210 @@
 
         .hero-pattern {
             background-color: var(--coc-stone);
-            background-image: url("https://www.transparenttextures.com/patterns/dark-matter.png");
+            background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+            background-blend-mode: overlay;
         }
 
         .btn-gold {
-            background: linear-gradient(to bottom, var(--coc-gold), var(--coc-gold-dark));
-            box-shadow: 0 4px 0 #9c730c, 0 5px 10px rgba(0,0,0,0.5);
+            background: linear-gradient(to bottom, #f3c31b, #d4a017);
+            box-shadow: 0 4px 0 #b0840a;
             transition: all 0.1s;
         }
 
-        .btn-gold:active {
-            transform: translateY(4px);
-            box-shadow: 0 0 0 #9c730c, 0 2px 5px rgba(0,0,0,0.5);
+        .btn-gold:active { transform: translateY(2px); box-shadow: 0 2px 0 #b0840a; }
+
+        .card {
+            border: 1px solid var(--coc-border);
+            border-radius: 12px;
+            background: #111111; 
+            transition: transform 0.2s, border-color 0.2s;
+            overflow: hidden;
         }
 
-        .card-hover {
-            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        .card:hover { transform: translateY(-5px); border-color: var(--coc-gold); }
+
+        .th-btn {
+            background: #111111;
+            border: 2px solid var(--coc-border);
+            transition: all 0.2s;
         }
-        .card-hover:hover {
-            transform: translateY(-5px) scale(1.02);
+        
+        .th-btn:hover { border-color: #049b5cf6; background: #2d3748; }
+
+        .th-btn.active {
+            border-color: var(--coc-gold);
+            background: linear-gradient(135deg, #84ac26 0%, #33f004 100%);
+            box-shadow: 0 0 15px rgba(243, 195, 27, 0.2);
+            color: black !important;
+        }
+
+        .hide-scroll::-webkit-scrollbar { height: 6px; }
+        .hide-scroll::-webkit-scrollbar-track { background: transparent; }
+        .hide-scroll::-webkit-scrollbar-thumb { background: var(--coc-border); border-radius: 10px; }
+
+        .base-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background: #141414;
+        }
+
+        ::-webkit-scrollbar {
+            width: 9px;
+            height: 16px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--coc-stone-dark);
+            border-left: 2px solid var(--coc-stone);
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, var(--coc-gold) 0%, var(--coc-gold-dark) 100%);
+            border: 3px solid var(--coc-stone-dark);
+            border-radius: 4px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.8);
+            cursor: pointer;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #fff275 0%, var(--coc-gold) 100%);
+            box-shadow: 0 0 10px var(--coc-gold);
+        }
+
+        ::-webkit-scrollbar-corner {
+            background: var(--coc-stone-dark);
+        }
+
+        * {
+            scrollbar-width: auto;
+            scrollbar-color: var(--coc-gold-dark) var(--coc-stone-dark);
         }
     </style>
 </head>
-<body class="antialiased">
+<body class="hero-pattern">
 
-    <!-- Navigation Container (Populated by layoutnav.js) -->
     <div id="navbar-container"></div>
 
-    <!-- Hero Section -->
-    <div class="hero-pattern border-b border-slate-800 py-16 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <h1 class="text-4xl md:text-6xl font-black text-white uppercase tracking-tight mb-4 drop-shadow-lg">
-                Clash of Clans <span class="text-[var(--coc-gold)]">Layouts</span>
-            </h1>
-            <p class="text-slate-400 text-lg md:text-xl font-semibold max-w-2xl mx-auto">
-                Find the perfect base for War, Farming, Trophy pushing, and more.
-            </p>
-        </div>
-    </div>
+    <section class="pt-32 pb-10 px-6 max-w-6xl mx-auto text-center">
+        <h1 class="text-4xl md:text-6xl font-black text-white mb-6 uppercase tracking-tight">Base Layouts</h1>
+        <p class="text-slate-300 max-w-2xl mx-auto font-medium">Select your Town Hall level to find the best curated bases. Copy them directly to your game.</p>
+    </section>
 
-    <!-- Main Content Area -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        
-        <!-- Search & Filter Controls -->
-        <div class="bg-slate-900/50 p-4 md:p-6 rounded-2xl border border-slate-800 mb-8 shadow-xl">
-            <!-- Search Bar -->
-            <div class="relative mb-6">
-                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                    <svg class="h-5 w-5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                    </svg>
-                </div>
-                <input type="text" id="search-input" class="block w-full pl-12 pr-4 py-4 bg-slate-800 border-2 border-slate-700 rounded-xl leading-5 bg-transparent text-white placeholder-slate-400 focus:outline-none focus:bg-slate-800 focus:border-[var(--coc-gold)] focus:ring-0 transition-colors duration-200 text-lg shadow-inner" placeholder="Search by Town Hall (e.g., TH13), Category (e.g., War), or Title...">
-            </div>
-
-            <!-- Town Hall Level Filters -->
-            <div class="flex items-center justify-between gap-4">
-                <div class="flex-1 overflow-x-auto pb-2 -mb-2 no-scrollbar">
-                    <div class="flex space-x-2" id="th-filters">
-                        <button class="th-filter active px-6 py-2.5 rounded-lg font-black uppercase tracking-wider text-sm border-2 border-[var(--coc-gold)] bg-[var(--coc-gold)] text-black shadow-lg" data-th="ALL">
-                            All TH
-                        </button>
-                        <!-- Script will inject TH buttons here based on data -->
-                    </div>
-                </div>
+    <section class="py-6 border-y border-yellow-800 bg-[black]/90 backdrop-blur-md sticky top-[60px] z-40 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4">
+            <div id="th-selector" class="flex overflow-x-auto hide-scroll gap-3 pb-2 snap-x">
             </div>
         </div>
+    </section>
 
-        <!-- Layouts Grid -->
-        <div id="layouts-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            <!-- Cards will be injected here -->
+    <section class="py-12 px-6 min-h-[60vh]">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-center justify-between mb-10">
+                <h2 id="current-th-title" class="text-2xl md:text-3xl font-black text-white uppercase tracking-widest">
+                    <span class="text-yellow-400">TH15</span> Layouts
+                </h2>
+                <div id="layout-count" class="text-white-400 font-bold text-sm bg-yellow-800/50 px-4 py-1 rounded-full border border-yellow-700">
+                    0 Bases
+                </div>
+            </div>
+
+            <div id="layouts-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            </div>
         </div>
+    </section>
 
-        <!-- No Results State -->
-        <div id="no-results" class="hidden text-center py-20">
-            <svg class="mx-auto h-16 w-16 text-slate-600 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            <h3 class="text-xl font-bold text-slate-300 mb-2">No layouts found</h3>
-            <p class="text-slate-500">Try adjusting your search query or filters.</p>
-        </div>
-
+    <footer class="py-8 text-center text-slate-500 text-xs border-t border-slate-800 bg-[#111111]/90 mt-auto">
+    <div class="max-w-4xl mx-auto px-6">
+        <p>For uploading your own bases Join our Clan Discord Server! <a href="https://discord.gg/jEN9NNdA4v" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-400 hover:underline transition-colors">Join Server Now</a>.</p>
+        <p>This material is unofficial and is not endorsed by Supercell. For more information see <a href="https://supercell.com/en/fan-content-policy/" target="_blank" rel="noopener noreferrer" class="text-yellow-500 hover:text-yellow-400 hover:underline transition-colors">Supercell's Fan Content Policy</a>.</p>
     </div>
+</footer>
 
-    <!-- External Scripts -->
     <script src="layoutnav.js"></script>
     <script src="layoutdb.js"></script>
 
-    <!-- Main Logic -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Assume layoutdb.js exposes a global variable containing the base data.
-            // Adjust "layouts" to whatever variable name is used in layoutdb.js if different.
-            const db = typeof layouts !== 'undefined' ? layouts : (typeof databases !== 'undefined' ? databases : {});
+        const thLevels = [7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18 ];
+        let currentTH = 7;
+
+        function init() {
+            renderTHSelector();
+            selectTH(currentTH);
+        }
+
+        function renderTHSelector() {
+            const container = document.getElementById('th-selector');
+            container.innerHTML = thLevels.map(th => `
+                <button id="btn-th-${th}" 
+                        onclick="selectTH(${th})" 
+                        class="th-btn flex-shrink-0 px-8 py-3 rounded-xl font-black uppercase tracking-widest text-lg snap-center text-slate-400">
+                    TH ${th}
+                </button>
+            `).join('');
+        }
+
+        function selectTH(th) {
+            currentTH = th;
             
-            const grid = document.getElementById('layouts-grid');
-            const noResults = document.getElementById('no-results');
-            const searchInput = document.getElementById('search-input');
-            const filtersContainer = document.getElementById('th-filters');
-            
-            let currentTH = 'ALL';
-            let searchQuery = '';
-
-            // 1. Initialize TH Filter Buttons dynamically based on available data
-            const availableTHs = Object.keys(db).sort((a, b) => b - a); // Sort TH descending
-            availableTHs.forEach(th => {
-                const btn = document.createElement('button');
-                btn.className = 'th-filter px-6 py-2.5 rounded-lg font-black uppercase tracking-wider text-sm border-2 border-slate-700 bg-slate-800 text-slate-300 hover:border-slate-500 hover:text-white transition-colors whitespace-nowrap';
-                btn.dataset.th = th;
-                btn.textContent = `TH ${th}`;
-                filtersContainer.appendChild(btn);
-            });
-
-            // 2. Setup Event Listeners
-            // Search Input
-            searchInput.addEventListener('input', (e) => {
-                searchQuery = e.target.value.toLowerCase().trim();
-                renderLayouts();
-            });
-
-            // Filter Buttons
-            filtersContainer.addEventListener('click', (e) => {
-                const btn = e.target.closest('.th-filter');
-                if (!btn) return;
-
-                // Update active state styling
-                document.querySelectorAll('.th-filter').forEach(b => {
-                    b.classList.remove('border-[var(--coc-gold)]', 'bg-[var(--coc-gold)]', 'text-black', 'shadow-lg');
-                    b.classList.add('border-slate-700', 'bg-slate-800', 'text-slate-300');
-                });
-                
-                btn.classList.remove('border-slate-700', 'bg-slate-800', 'text-slate-300');
-                btn.classList.add('border-[var(--coc-gold)]', 'bg-[var(--coc-gold)]', 'text-black', 'shadow-lg');
-
-                currentTH = btn.dataset.th;
-                renderLayouts();
-            });
-
-            // 3. Render Function
-            function renderLayouts() {
-                grid.innerHTML = '';
-                let displayLayouts = [];
-
-                // Gather layouts based on selected TH
-                for (let thLevel in db) {
-                    if (currentTH === 'ALL' || currentTH === thLevel) {
-                        // Append the TH level to the object for search context
-                        const basesWithTH = db[thLevel].map(base => ({ ...base, thLevel: thLevel }));
-                        displayLayouts = displayLayouts.concat(basesWithTH);
-                    }
-                }
-
-                // Apply Search Filter
-                if (searchQuery) {
-                    displayLayouts = displayLayouts.filter(layout => {
-                        const titleMatch = layout.title && layout.title.toLowerCase().includes(searchQuery);
-                        const typeMatch = layout.type && layout.type.name && layout.type.name.toLowerCase().includes(searchQuery);
-                        const thMatch = `th${layout.thLevel}`.includes(searchQuery) || `th ${layout.thLevel}`.includes(searchQuery);
-                        const idMatch = layout.id && layout.id.toString().includes(searchQuery);
-                        
-                        return titleMatch || typeMatch || thMatch || idMatch;
-                    });
-                }
-
-                // Show/Hide No Results
-                if (displayLayouts.length === 0) {
-                    grid.classList.add('hidden');
-                    noResults.classList.remove('hidden');
-                    return;
-                } else {
-                    grid.classList.remove('hidden');
-                    noResults.classList.add('hidden');
-                }
-
-                // Render Cards
-                displayLayouts.forEach(layout => {
-                    // Fallback colors if type doesn't specify
-                    const typeColorClass = layout.type?.color || 'bg-slate-900/50 text-slate-400 border-slate-700/50';
-                    const typeName = layout.type?.name || 'Uncategorized';
-                    
-                    const cardHTML = `
-                        <div class="card-hover bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 shadow-xl flex flex-col h-full">
-                            <div class="relative h-48 bg-slate-800 overflow-hidden group">
-                                <img src="${layout.image}" alt="${layout.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/1e293b/475569?text=Image+Not+Found'">
-                                
-                                <div class="absolute top-0 right-0">
-                                    <span class="${typeColorClass} text-[10px] font-black uppercase px-3 py-1.5 rounded-bl-xl border-b border-l tracking-tighter shadow-xl backdrop-blur-sm">
-                                        ${typeName}
-                                    </span>
-                                </div>
-                                <div class="absolute top-0 left-0">
-                                    <span class="bg-[var(--coc-stone)] text-white text-[12px] font-black uppercase px-3 py-1.5 rounded-br-xl border-b border-r border-slate-700 shadow-xl backdrop-blur-sm">
-                                        TH ${layout.thLevel}
-                                    </span>
-                                </div>
-                            </div>
-                            
-                            <div class="p-6 flex flex-col flex-grow">
-                                <h3 class="text-lg font-black text-white uppercase leading-tight mb-2 min-h-[3rem] line-clamp-2">${layout.title}</h3>
-                                <div class="flex items-center justify-between mt-auto pt-4 border-t border-slate-800">
-                                    <span class="text-[10px] text-slate-500 font-bold uppercase tracking-widest">${layout.date || 'Recent'}</span>
-                                    <span class="text-[10px] text-slate-600 font-bold">ID: #${layout.id}</span>
-                                </div>
-                                
-                                <a href="${layout.link}" target="_blank" class="btn-gold text-black mt-4 w-full py-3 rounded-lg font-black uppercase tracking-widest flex items-center justify-center gap-2 text-sm shadow-md hover:shadow-xl">
-                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path><path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 1 1 0 00-1 1v2a1 1 0 01-1 1H6a1 1 0 01-1-1V6a1 1 0 011-1h1.5a1 1 0 001-1z"></path></svg>
-                                    Copy Layout
-                                </a>
-                            </div>
-                        </div>
-                    `;
-                    grid.insertAdjacentHTML('beforeend', cardHTML);
-                });
+            document.querySelectorAll('.th-btn').forEach(btn => btn.classList.remove('active', 'text-white'));
+            const activeBtn = document.getElementById(`btn-th-${th}`);
+            if (activeBtn) {
+                activeBtn.classList.add('active');
+                activeBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
             }
 
-            // Initial Render
-            renderLayouts();
-        });
+            document.getElementById('current-th-title').innerHTML = `<span class="text-yellow-400">TH${th}</span> Layouts`;
+            renderLayouts(th);
+        }
+
+        function renderLayouts(th) {
+            const grid = document.getElementById('layouts-grid');
+            const layouts = window.layoutDatabase ? window.layoutDatabase[th] || [] : [];
+            
+            document.getElementById('layout-count').innerText = `${layouts.length} Bases`;
+            
+            if (layouts.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full text-center py-20 opacity-50">
+                        <p class="text-2xl font-black uppercase tracking-widest">No TH${th} Layouts Found</p>
+                        <p class="text-slate-400">We are currently updating our database for this level.</p>
+                    </div>`;
+                return;
+            }
+
+            grid.innerHTML = layouts.map(layout => `
+                <div class="card flex flex-col h-full group">
+                    <div class="relative h-48 bg-slate-900 overflow-hidden">
+                        <img src="${layout.image}" 
+                             alt="${layout.title}" 
+                             class="base-img transition-transform duration-500 group-hover:scale-110"
+                             onerror="this.src='https://placehold.co/600x400/222222/white?text=Base+Preview+Coming+Soon'">
+                        <div class="absolute top-3 left-3">
+                            <span class="${layout.type.color} border px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-tighter shadow-xl">
+                                ${layout.type.name}
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-lg font-black text-white uppercase leading-tight mb-2 min-h-[3rem]">${layout.title}</h3>
+                        <div class="flex items-center justify-between mt-auto pt-4">
+                            <span class="text-[10px] text-slate-500 font-bold uppercase tracking-widest">${layout.date}</span>
+                            <span class="text-[10px] text-slate-600 font-bold">ID: #${layout.id}</span>
+                        </div>
+                        
+                        <a href="${layout.link}" target="_blank" class="btn-gold text-black mt-4 w-full py-3 rounded-lg font-black uppercase tracking-widest flex items-center justify-center gap-2 text-sm">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path><path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path></svg>
+                            Copy Layout
+                        </a>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        document.addEventListener('DOMContentLoaded', init);
     </script>
 </body>
 </html>
