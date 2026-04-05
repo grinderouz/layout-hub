@@ -149,14 +149,6 @@ const layoutsData = {
             link: "https://link.clashofclans.com/en?action=OpenLayout&id=TH12%3AHV%3AAAAAMQAAAAJ1J7ehj-2iTH8zUNT97ifL",
             date: "Unknown"
         },
-        {
-            id: 1202,
-            title: "Top War Base TH14 with Link, Anti Everything - Anti 2 Stars CWL Plan 2026",
-            type: baseTypes.WAR,
-            image: "https://clashofclans-layouts.com/pics/th14_plans/war/original/th14_war_228.jpg",
-            link: "https://link.clashofclans.com/en?action=OpenLayout&id=TH14%3AWB%3AAAAAQAAAAAJGG5leOaPtMYFqGRSV2i_g",
-            date: "Unknown"
-        },
     ],
     13: [
         {
