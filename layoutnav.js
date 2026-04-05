@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="max-w-7xl mx-auto w-full px-6 flex items-center justify-between">
                 <div class="flex items-center gap-10">
                     <a href="index.html" class="flex items-center gap-3 group">
-                        <img src="assets/logo.png" alt="Grinderouz Logo" class="h-10 w-10 transition-transform group-hover:rotate-12" onerror="this.src='https://placehold.co/40x40/black/white?text=G'">
+                        <img src="assets/navicon.png" alt="Favicon" class="h-10 w-10 transition-transform group-hover:rotate-12" onerror="this.src='https://placehold.co/40x40/black/white?text=G'">
                         <span class="text-white font-black text-xl tracking-tighter uppercase">Grinderouz</span>
                     </a>
                     
