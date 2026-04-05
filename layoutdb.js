@@ -5,6 +5,7 @@ const baseTypes = {
     CWL: { id: 'cwl', name: 'CWL', color: 'bg-blue-900/50 text-blue-400 border-blue-700/50' },
     HYBRID: { id: 'hybrid', name: 'Hybrid', color: 'bg-yellow-900/50 text-yellow-400 border-yellow-700/50' },
     CLANMADE: { id: 'clanlayout', name: 'Clan Made', color: 'bg-[gold] text-[black] border-[gold]' },
+    ART: { id: 'art', name: 'ART', color: 'bg-[pink] text-[white] border-[blue]' },
     SOON: { id: 'soon', name: 'Coming Soon!', color: 'bg-[darkorange] text-white-400 border-[orange]' }
 };
 
@@ -170,8 +171,32 @@ const layoutsData = {
             id: 1302,
             title: "Anti 3 Stars Base TH13 with Link, Hybrid - best plan / layout / design",
             type: baseTypes.HYBRID,
-            image: "https://clashofclans-layouts.com/pics/th13_plans/defence/original/th13_defence_63.jpg?u=1681124767",
+            image: "https://clashofclans-layouts.com/pics/th13_plans/defence/original/th13_defence_63.jpg",
             link: "https://link.clashofclans.com/en?action=OpenLayout&id=TH13%3AHV%3AAAAADgAAAAJL3hEtYLXb8xM4jDCIMjI6",
+            date: "Unknown"
+        },
+        {
+            id: 1303,
+            title: "Top Troll Funny Base TH13 with Link - Funny Art Plan",
+            type: baseTypes.ART,
+            image: "https://clashofclans-layouts.com/pics/th13_plans/troll/original/th13_troll_7.jpg",
+            link: "https://link.clashofclans.com/en?action=OpenLayout&id=TH13%3AHV%3AAAAADgAAAAJMTCw-SX3XcewzkVAL-FOU",
+            date: "Unknown"
+        },
+        {
+            id: 1304,
+            title: "Anti 3 Stars Base TH13 with Link - best plan / layout / design",
+            type: baseTypes.TROPHY,
+            image: "https://clashofclans-layouts.com/pics/th13_plans/defence/original/th13_defence_137.jpg",
+            link: "https://link.clashofclans.com/en?action=OpenLayout&id=TH13%3AHV%3AAAAADgAAAALMXsRFgDeXHQ0w6MoSN8Ma",
+            date: "Unknown"
+        },
+        {
+            id: 1305,
+            title: "Farming Base TH13 with Link, Anti 2 Stars - plan / layout / design",
+            type: baseTypes.FARM,
+            image: "https://clashofclans-layouts.com/pics/th13_plans/farm/original/th13_farm_77.jpg",
+            link: "https://link.clashofclans.com/en?action=OpenLayout&id=TH13%3AHV%3AAAAADgAAAALGbaLn3M33DZpUtp8uoqyg",
             date: "Unknown"
         },
     ],
