@@ -142,7 +142,7 @@ const layoutsData = {
     ],
     12: [
         {
-            id: 1101,
+            id: 1201,
             title: "Defense (Trophy) Base TH12 with Link - plan / layout / design - Clash of Clans 2026",
             type: baseTypes.TROPHY,
             image: "https://clashofclans-layouts.com/pics/th12_plans/defence/thumb/th12_defence_147.jpg",
@@ -150,11 +150,11 @@ const layoutsData = {
             date: "Unknown"
         },
         {
-            id: 1102,
-            title: "Coming Soon...",
-            type: baseTypes.SOON,
-            image: "#",
-            link: "#",
+            id: 1202,
+            title: "Top War Base TH14 with Link, Anti Everything - Anti 2 Stars CWL Plan 2026",
+            type: baseTypes.WAR,
+            image: "https://clashofclans-layouts.com/pics/th14_plans/war/original/th14_war_228.jpg",
+            link: "https://link.clashofclans.com/en?action=OpenLayout&id=TH14%3AWB%3AAAAAQAAAAAJGG5leOaPtMYFqGRSV2i_g",
             date: "Unknown"
         },
     ],
@@ -197,6 +197,24 @@ const layoutsData = {
             type: baseTypes.FARM,
             image: "https://clashofclans-layouts.com/pics/th13_plans/farm/original/th13_farm_77.jpg",
             link: "https://link.clashofclans.com/en?action=OpenLayout&id=TH13%3AHV%3AAAAADgAAAALGbaLn3M33DZpUtp8uoqyg",
+            date: "Unknown"
+        },
+    ],
+    14: [
+        {
+            id: 1401,
+            title: "Anti 3 Stars Base TH14 with Link, Hybrid - best plan / layout / design",
+            type: baseTypes.HYBRID,
+            image: "https://clashofclans-layouts.com/pics/th14_plans/defence/original/th14_defence_86.jpg",
+            link: "https://link.clashofclans.com/en?action=OpenLayout&id=TH14%3AHV%3AAAAAQAAAAAJHlm4AHw_5BlMVv_jo-aK_",
+            date: "Unknown"
+        },
+        {
+            id: 1402,
+            title: "Top War Base TH14 with Link, Anti Everything - Anti 2 Stars CWL Plan 2026",
+            type: baseTypes.WAR,
+            image: "https://clashofclans-layouts.com/pics/th14_plans/war/original/th14_war_228.jpg",
+            link: "https://link.clashofclans.com/en?action=OpenLayout&id=TH14%3AWB%3AAAAAQAAAAAJGG5leOaPtMYFqGRSV2i_g",
             date: "Unknown"
         },
     ],
