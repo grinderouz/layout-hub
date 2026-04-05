@@ -157,6 +157,16 @@ const layoutsData = {
             date: "Unknown"
         },
     ],
+    13: [
+        {
+            id: 1301,
+            title: "Top War Base TH13 with Link, Anti Everything - CWL Defence Plan 2026",
+            type: baseTypes.WAR,
+            image: "https://clashofclans-layouts.com/pics/th13_plans/war/original/th13_war_300.jpg",
+            link: "https://link.clashofclans.com/en?action=OpenLayout&id=TH13%3AWB%3AAAAADgAAAALPSu_SPvErfN-Msd28w3Pq",
+            date: "Unknown"
+        },
+    ],
 };
 
 window.layoutDatabase = layoutsData;
